@@ -2,7 +2,6 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import validate from './validate'
 import renderDatePicker from './renderDatePicker';
-import { date } from 'redux-form-validators';
 const values = ['sea-297','forest-497','snow-897']
 
 const renderColorSelector = ({ input, meta: { touched, error }, bookedKey }) => {

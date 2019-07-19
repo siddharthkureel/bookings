@@ -20,6 +20,12 @@
     width: 100% !important;
     padding:10rem 10rem;
   }
+  .heading-primary--main{
+    font-size: 2rem;
+  }
+  .heading-primary--sub{
+    font-size: 1rem;
+  }
 }
 @media screen and (max-width: 860px) {
   .card__side{
