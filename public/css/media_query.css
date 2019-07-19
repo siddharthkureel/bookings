@@ -1,0 +1,28 @@
+@media screen and (max-width: 1000px) {
+  html{
+      font-size: 60%;
+  }
+}
+@media screen and (max-width: 680px) {
+  html{
+      font-size: 40%;
+  }
+  .form__input{
+      width: 120%;
+  }
+  .row .col-1-of-3 {
+    width: 100% !important;
+    padding:10rem 20rem;
+  }
+}
+@media screen and (max-width: 550px) {
+   .row .col-1-of-3 {
+    width: 100% !important;
+    padding:10rem 10rem;
+  }
+}
+@media screen and (max-width: 860px) {
+  .card__side{
+    height: 60rem;
+  }
+}

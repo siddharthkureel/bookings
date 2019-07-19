@@ -17,5 +17,5 @@ export const registerUser = (data)=> async (dispatch) => {
 }
 export const signIn = (data)=> async (dispatch) =>{
     await firebase.auth().signInWithEmailAndPassword(data.email,data.password)
-    history.push('/')
+    history.push('/packages')
 }

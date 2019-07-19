@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Field, reduxForm }  from "redux-form";
 import { connect } from "react-redux";
 import { registerUser } from "../actions";
+import history from "../../history";
 class Register extends Component {
     renderError = ({ touched, error }) => {
         if (touched) {
@@ -50,6 +51,7 @@ class Register extends Component {
 
                                 <div className="form__group">
                                     <button onClick={this.formSubmit} className="btn btn--green">Register &rarr;</button>
+                                    <button onClick={() => { history.push('/signin') }} className="btn btn--green">Signin &rarr;</button >
                                 </div>
                             </form>
                         </div>

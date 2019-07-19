@@ -1,7 +1,8 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import validate from './validate'
-import renderField from './renderField';
+import renderDatePicker from './renderDatePicker';
+import { date } from 'redux-form-validators';
 const values = ['sea-297','forest-497','snow-897']
 
 const renderColorSelector = ({ input, meta: { touched, error }, bookedKey }) => {
@@ -36,12 +37,13 @@ const WizardFormThirdPage = props => {
                                 <Field  name="bookingFor" bookedKey={booking} component={renderColorSelector} />
                             </div>
                             <div className="form__group">
-                                <label className="form__label">Date From</label>
-                                <Field classNameInput="form__input" name="dateFrom" type="date" component={renderField} />
-                            </div>
-                            <div className="form__group">
-                                <label className="form__label">Date To</label>
-                                <Field classNameInput="form__input" name="dateTo" type="date" component={renderField} />
+                                <label className="form__label">Date </label>
+                                <Field 
+                                    classNameInput="form__input" 
+                                    id="date" 
+                                    name="dateFrom" 
+                                    component={renderDatePicker} 
+                                  />
                             </div>
                             <div className="form__group">
                                 <button type="button" className="btn btn--green" onClick={previousPage}>Previous</button>

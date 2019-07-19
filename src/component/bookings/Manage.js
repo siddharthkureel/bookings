@@ -21,7 +21,6 @@ class Manage extends Component {
                 });
                 let array = bookings.filter((booking)=>booking.logInEmail===email)
                 ho = [...array]
-                console.log(ho)
             });
         }
         this.setState({
@@ -45,7 +44,7 @@ class Manage extends Component {
                 <td>{booking.firstName}&nbsp;{booking.lastName}</td>
                 <td>{booking.email}</td>
                 <td>{booking.bookingFor}</td>
-                <td>{booking.dateFrom} to {booking.dateTo}</td>
+                <td>{booking.dateFrom}</td>
                 <td>${booking.price}</td>
                     <td><Link to={`/modify/${booking.id}`}>Modify</Link></td>
                 <td>{booking.status}</td>
@@ -63,7 +62,7 @@ class Manage extends Component {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Package</th>
-                            <th>Dates</th>
+                            <th>Date</th>
                             <th>Price</th>
                             <th>Modify</th>
                             <th>Status</th>

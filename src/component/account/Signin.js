@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from "redux-form";
 import { connect } from "react-redux";
+import history from "../../history";
 import { signIn } from "../actions";
 class Signin extends Component {
     renderError = ({ touched, error }) => {
@@ -44,7 +45,8 @@ class Signin extends Component {
 
 
                                 <div className="form__group">
-                                    <button className="btn btn--green">SignIn &rarr;</button>
+                                    <button onClick={this.formSubmit} className="btn btn--green">SignIn &rarr;</button>
+                                    <button onClick={()=>{history.push('/register')}} className="btn btn--green">Register &rarr;</button >
                                 </div>
                             </form>
                         </div>
